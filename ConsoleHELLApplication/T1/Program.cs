@@ -53,10 +53,10 @@ namespace T1
             */
             Hissi hissi = new Hissi();
             Console.WriteLine("Welcome to the elevator! ");
-            int number;
-            do
+            int number=1;
+            Console.WriteLine("Elevator is now in floor " + hissi.Floor);
+            while (number != 0) 
             {
-                Console.WriteLine("Elevator is now in floor " + hissi.Floor);
                 Console.WriteLine("Give a new floor number(1 - 5) (Press enter to exit the elevator) ");
                 string line = Console.ReadLine();
                 bool result = int.TryParse(line, out number);
@@ -68,9 +68,9 @@ namespace T1
                 }
                 if (number == 0)
                 {
-                    Console.WriteLine("Bye bye! ");
+                    Console.WriteLine("You broke the elevator! ");
                 }
-            } while (number != 0);
+            }
             Console.ReadLine();
         }
     }

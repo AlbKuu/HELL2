@@ -19,15 +19,17 @@ namespace T1
             }
             set
             {
-                if (value >= minFloor);
+                if (value <= maxFloor) floor = value;
+                else
                 {
-                    Console.WriteLine("Too low - set to min!");
-                    floor = minFloor;
-                }
-                if (value <= maxFloor);
-                {
-                    Console.WriteLine("Too high - set to max!");
                     floor = maxFloor;
+                    Console.WriteLine("Too high - set to max!");
+                }
+                if (value >= minFloor)floor = value;
+                else
+                {
+                    floor = minFloor;
+                    Console.WriteLine("Too low - set to min!");
                 }
             }
         }
